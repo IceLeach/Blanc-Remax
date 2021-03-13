@@ -1,9 +1,73 @@
+import ProTable, { ProColumns } from "@ant-design/pro-table";
 import React from "react";
 
+interface studentColumns {
+  id?: string;
+  name?: string;
+  phoneNumber?: string;
+  email?: string;
+  state?: string;
+  lastLoginDateTime?: string;
+}
+
 const studentManagement = () => {
+  const columns: ProColumns<studentColumns>[] = [
+    {
+      title: '学号',
+      dataIndex: 'id',
+      // hideInForm: true,
+    },
+    {
+      title: '学生姓名',
+      dataIndex: 'name',
+    },
+    {
+      title: '手机号',
+      dataIndex: 'phoneNumber',
+      search: false,
+    },
+    {
+      title: 'Email',
+      dataIndex: 'email',
+      search: false,
+    },
+    {
+      title: '状态',
+      dataIndex: 'state',
+      hideInForm: true,
+      // renderText: (data: StateDto) => data.displayName,
+    },
+    {
+      title: '最后登录时间',
+      dataIndex: 'lastLoginDateTime',
+      valueType: 'dateTime',
+      hideInForm: true,
+      search: false,
+    },
+    {
+      title: '操作',
+      valueType: 'option',
+      render: (_, record) => [
+        <a onClick={() => { }}>详细</a>,
+      ],
+    },
+  ];
 
   return (
-    <div>studentManagement</div>
+    <>
+      <ProTable
+        columns={columns}
+        request={() => Promise.resolve({
+          data: [],
+          success: true,
+        })}
+        search={{
+          defaultCollapsed: false,
+          collapseRender: () => <></>,
+        }}
+      />
+      <div>studentManagement</div>
+    </>
   );
 }
 
