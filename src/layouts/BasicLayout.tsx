@@ -108,7 +108,7 @@ const BL = (props: any) => {
       )}
       rightContentRender={() => (
         <>
-          <Switch onChange={(e) => themeChange(e)} />
+          {/* <Switch onChange={(e) => themeChange(e)} /> */}
           <Avatar shape="square" size="small" icon={<UserOutlined />} />
         </>
       )}
