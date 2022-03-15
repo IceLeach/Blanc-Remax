@@ -1,7 +1,0 @@
-https://gitlab.powertradepro.com/frontend_group
-
-https://gitlab.powertradepro.com/frontend_group/apaas/DangQu.PT.WebApp.git
-https://gitlab.powertradepro.com/frontend_group/common/DangQu.PT.UILib.git
-https://gitlab.powertradepro.com/frontend_group/support_service/DangQu.PT.AdminWeb.git
-https://gitlab.powertradepro.com/frontend_group/support_service/CRM-WebApp.git
-https://gitlab.powertradepro.com/frontend_group/tools/language-tool.git
